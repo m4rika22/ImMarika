@@ -1,0 +1,153 @@
+/* Yleiset tyylit */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("images/vincent-burkhead-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+/* Yksittäisen osion tyyli */
+.profile,
+.section {
+  background: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profiiliosio */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.contact-info {
+  margin-top: 10px;
+}
+
+/* Sähköposti ja kirjekuorilogo -tyylit */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Keskittää logon ja osoitteen */
+  margin-top: 2px;
+}
+
+/* Kuvaketyylit */
+.social-links {
+  display: flex;
+  gap: 10px; /* Väli kuvakkeiden välille */
+  margin-top: 15px; /* Vähän tilaa sähköpostin ja kuvakkeiden väliin */
+}
+
+.social-icon {
+  width: 40px !important; /* Kuvakkeen leveys */
+  height: 40px !important; /* Korkeus skaalautuu automaattisesti */
+  border-radius: 50%; /* Pyöristetty muoto */
+  transition: transform 0.2s; /* Efekti hover-tilaan */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Suurentaa ikonia hoverilla */
+}
+
+.email-icon {
+  font-size: 2em; /* Logon koko */
+  color: #7b7979; /* Logon väri */
+  margin: 0; /* Vähän tilaa logon ja sähköpostiosoitteen väliin */
+  padding: 0; /* Varmistetaan, ettei padding lisää tilaa */
+}
+
+.email-address {
+  font-size: 1em;
+  color: #333;
+  margin: 0; /* Poistetaan ylimääräiset marginaalit */
+  padding-top: 2px; /* Vain pieni väli logon ja sähköpostin väliin */
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+/* Desktop-näytön asettelu */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .profile {
+    width: 30%;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0;
+  }
+
+  .profile img {
+    margin-bottom: 10px;
+  }
+
+  .sections {
+    width: 70%;
+  }
+  /* Osaamisalueet - tyyli */
+  .skills h3 {
+    font-size: 1.1em;
+    margin-top: 15px;
+    color: #333;
+  }
+
+  .skills ul {
+    list-style-type: none; /* Poistetaan luettelomerkit */
+    padding-left: 0;
+  }
+
+  .skills li {
+    margin: 5px 0;
+  }
+
+  /* Footer-tyylit */
+  .footer {
+    padding: 10px 20px;
+    text-align: right;
+    font-size: 0.9em;
+    color: #333;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer a {
+    color: #4238d1; /* Linkkien väri */
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline; /* Korostus hover-tilassa */
+  }
+}
